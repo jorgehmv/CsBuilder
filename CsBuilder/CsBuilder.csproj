@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DD8AF92-1BB3-44D3-9AFC-72F37C32D2CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsBuilder</RootNamespace>
+    <AssemblyName>CsBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comments\SingleComment.cs" />
+    <Compile Include="DSL\AssignmentExpressionExtensions.cs" />
+    <Compile Include="DSL\BlockStatementExtensions.cs" />
+    <Compile Include="DSL\BooleanExtensions.cs" />
+    <Compile Include="DSL\ClassStatementExtensions.cs" />
+    <Compile Include="DSL\ConditionalExpression.cs" />
+    <Compile Include="DSL\ConstructorStatementExtensions.cs" />
+    <Compile Include="DSL\Cs.cs" />
+    <Compile Include="DSL\CsTypeExtensions.cs" />
+    <Compile Include="DSL\DeclarationStatementExtensions.cs" />
+    <Compile Include="DSL\ExpressionExtensions.cs" />
+    <Compile Include="DSL\FieldStatementExtensions.cs" />
+    <Compile Include="DSL\IAccessModifiableExtensions.cs" />
+    <Compile Include="DSL\IAttributableExtensions.cs" />
+    <Compile Include="DSL\ICodeExtensions.cs" />
+    <Compile Include="DSL\IModifiableExtensions.cs" />
+    <Compile Include="DSL\IntExtensions.cs" />
+    <Compile Include="DSL\MethodCallExpressionExtensions.cs" />
+    <Compile Include="DSL\MethodStatementExtensions.cs" />
+    <Compile Include="DSL\NewExpressionExtensions.cs" />
+    <Compile Include="DSL\PropertyStatementExtensions.cs" />
+    <Compile Include="DSL\StringExtensions.cs" />
+    <Compile Include="DSL\UsingStatementExtensions.cs" />
+    <Compile Include="Elements\AccessModifier.cs" />
+    <Compile Include="Elements\ClassModifier.cs" />
+    <Compile Include="Elements\CodeElement.cs" />
+    <Compile Include="Elements\LiteralCode.cs" />
+    <Compile Include="Elements\Modifier.cs" />
+    <Compile Include="Elements\NameElement.cs" />
+    <Compile Include="Elements\NullCode.cs" />
+    <Compile Include="Expressions\Arithmetic.cs" />
+    <Compile Include="Expressions\AssignmentExpression.cs" />
+    <Compile Include="Expressions\CastExpression.cs" />
+    <Compile Include="Expressions\CoalesceExpression.cs" />
+    <Compile Include="Expressions\CollectionInitializerExpression.cs" />
+    <Compile Include="Expressions\CollectionMemberInitializerExpression.cs" />
+    <Compile Include="Expressions\Comparison.cs" />
+    <Compile Include="Expressions\Condition.cs" />
+    <Compile Include="Expressions\ConstantExpression.cs" />
+    <Compile Include="Expressions\DefaultExpression.cs" />
+    <Compile Include="Expressions\Expression.cs" />
+    <Compile Include="Expressions\LambdaExpression.cs" />
+    <Compile Include="Expressions\MemberExpression.cs" />
+    <Compile Include="Expressions\MethodCallExpression.cs" />
+    <Compile Include="Expressions\NewExpression.cs" />
+    <Compile Include="Expressions\RefExpression.cs" />
+    <Compile Include="Expressions\TernaryOperatorExpression.cs" />
+    <Compile Include="Expressions\TypeOfExpression.cs" />
+    <Compile Include="Formatters\CodeRenderer.cs" />
+    <Compile Include="Formatters\ICodeRenderer.cs" />
+    <Compile Include="IAccessModifiable.cs" />
+    <Compile Include="IAttributable.cs" />
+    <Compile Include="ICode.cs" />
+    <Compile Include="IModifiable.cs" />
+    <Compile Include="Operators\ArithmeticOperator.cs" />
+    <Compile Include="Operators\BinaryOperator.cs" />
+    <Compile Include="Operators\ComparisonOperator.cs" />
+    <Compile Include="Operators\ConditionalOperator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statements\AccesorStatement.cs" />
+    <Compile Include="Statements\AttributeStatement.cs" />
+    <Compile Include="Statements\BlockStatement.cs" />
+    <Compile Include="Statements\Brace.cs" />
+    <Compile Include="Statements\ClassStatement.cs" />
+    <Compile Include="Statements\ConstructorStatement.cs" />
+    <Compile Include="Statements\DeclarationStatement.cs" />
+    <Compile Include="Statements\FieldStatement.cs" />
+    <Compile Include="Statements\ForeachStatement.cs" />
+    <Compile Include="Statements\ForStatement.cs" />
+    <Compile Include="Statements\IfStatement.cs" />
+    <Compile Include="Statements\InitDeclarationStatement.cs" />
+    <Compile Include="Statements\IStatement.cs" />
+    <Compile Include="Statements\MethodStatement.cs" />
+    <Compile Include="Statements\NamespaceStatement.cs" />
+    <Compile Include="Statements\ParametersStatement.cs" />
+    <Compile Include="Statements\ParameterStatement.cs" />
+    <Compile Include="Statements\PropertyStatement.cs" />
+    <Compile Include="Statements\ReturnStatement.cs" />
+    <Compile Include="Statements\SemicolonStatement.cs" />
+    <Compile Include="Statements\UsingStatement.cs" />
+    <Compile Include="Statements\WhileStatement.cs" />
+    <Compile Include="Statements\YieldReturnStatement.cs" />
+    <Compile Include="Types\CsType.cs" />
+    <Compile Include="Types\CustomType.cs" />
+    <Compile Include="Types\DictionaryType.cs" />
+    <Compile Include="Types\GenericType.cs" />
+    <Compile Include="Types\IComplexType.cs" />
+    <Compile Include="Types\IEnumerableType.cs" />
+    <Compile Include="Types\ListType.cs" />
+    <Compile Include="Types\NullableType.cs" />
+    <Compile Include="Utils\CodeUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
